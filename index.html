@@ -17,17 +17,31 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js"></script>
   </head>
   <body>
     <div class="card-container">
-        <h1>Generate a <span class="green-text">random password</span></h1>
-        <h2>Never use an insecure password again.</h2>
-        <button id="generate-password-btn">Generate passwords</button>
-        <div class="passwords-container">
-            <button id="first-password-el">password</button>
-            <button id="second-password-el">paswword</button>
-        </div>
+      <h1>Generate a <span class="green-text">random password</span></h1>
+
+      <h2>Never use an insecure password again.</h2>
+      <button id="generate-password-btn">Generate passwords</button>
+
+      <div class="slide-container">
+        <input
+          type="range"
+          min="1"
+          max="30"
+          value="15"
+          class="slider"
+          id="slider-el"
+        />
+        <p>Value: <span id="slider-value-el"></span></p>
+      </div>
+
+      <div class="passwords-container">
+        <button id="first-password-el">password</button>
+        <button id="second-password-el">paswword</button>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

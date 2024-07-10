@@ -1,7 +1,3 @@
-let firstPasswordEl = document.getElementById("first-password-el");
-let secondPasswordEl = document.getElementById("second-password-el");
-let generatePasswordBtn = document.getElementById("generate-password-btn");
-
 const characters = 
                 [
                     "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T",
@@ -11,3 +7,16 @@ const characters =
                     "}","]",",","|",":",";","<",">",".","?","/"
                 ];
 
+
+let firstPasswordEl = document.getElementById("first-password-el");
+let secondPasswordEl = document.getElementById("second-password-el");
+let generatePasswordBtn = document.getElementById("generate-password-btn");
+var sliderEl = document.getElementById("slider-el");
+var sliderValueEl = document.getElementById("slider-value-el");
+
+/* slider */
+sliderValueEl.innerHTML = sliderEl.value;
+
+sliderEl.oninput = function() {
+  sliderValueEl.innerHTML = this.value;
+}
