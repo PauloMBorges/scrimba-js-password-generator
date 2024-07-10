@@ -1,3 +1,7 @@
+let firstPasswordEl = document.getElementById("first-password-el");
+let secondPasswordEl = document.getElementById("second-password-el");
+let generatePasswordBtn = document.getElementById("generate-password-btn");
+
 const characters = 
                 [
                     "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T",
@@ -6,3 +10,4 @@ const characters =
                     "8","9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[",
                     "}","]",",","|",":",";","<",">",".","?","/"
                 ];
+
