@@ -4,6 +4,9 @@ This project is a password generator built as part of the [Scrimba's Learn JavaS
 
 ![Password Generator Screenshot](./password-generator-screenshot.png)
 
+## Website Link
+
+Visit the live website [here](https://paulomborges.github.io/scrimba-js-password-generator/).
 
 ## Features
 
