@@ -128,3 +128,23 @@ function renderRandomPassword() {
   firstPasswordEl.textContent = getRandomPassword();
   secondPasswordEl.textContent = getRandomPassword();
 }
+
+/* copies password to clipboard */
+const copyPassword = async (event) => {
+    const button = event.target;
+    const password = button.textContent;
+
+    if (password !== "") {
+        try {
+            await navigator.clipboard.writeText(password);
+            console.log("Content copied to clipboard!");
+        } catch (err) {
+            console.error("Failed to copy: ", err);
+        }
+    }
+};
+
+document.querySelectorAll('.password-btn').forEach(button => {
+    button.addEventListener('click', copyPassword);
+});
+
