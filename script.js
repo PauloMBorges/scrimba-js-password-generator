@@ -98,6 +98,8 @@ let generatePasswordBtn = document.getElementById("generate-password-btn");
 var sliderEl = document.getElementById("slider-el");
 var sliderValueEl = document.getElementById("slider-value-el");
 
+generatePasswordBtn.addEventListener("click", renderRandomPassword);
+
 /* slider */
 sliderValueEl.innerHTML = sliderEl.value;
 
@@ -107,16 +109,22 @@ sliderEl.oninput = function () {
 
 /* random characters index */
 function getRandomIndex() {
-    return Math.floor(Math.random() * characters.length)
+  return Math.floor(Math.random() * characters.length);
 }
 
 /* generate random password with slider length */
 function getRandomPassword() {
-    let passwordLength = sliderEl.value;
-    let randomPassword = "";
-    for (let i = 0; i < passwordLength; i++) {
-      randomPassword += characters[getRandomIndex()];
-    }
-    return randomPassword;
+  let passwordLength = sliderEl.value;
+  let randomPassword = "";
+  for (let i = 0; i < passwordLength; i++) {
+    randomPassword += characters[getRandomIndex()];
   }
-  
+  return randomPassword;
+}
+
+/* when the generate random password btn is clicked, calls getRandomPassword twice and set firstPw and secondPw text to these values */
+
+function renderRandomPassword() {
+  firstPasswordEl.textContent = getRandomPassword();
+  secondPasswordEl.textContent = getRandomPassword();
+}
