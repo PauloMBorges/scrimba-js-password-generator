@@ -127,6 +127,7 @@ function renderRandomPassword() {
 }
 
 /* Copy the clicked password to the clipboard */
+/* https://www.freecodecamp.org/news/copy-text-to-clipboard-javascript/ */
 const copyPassword = async (event) => {
     const button = event.target;
     const password = button.textContent;

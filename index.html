@@ -19,29 +19,40 @@
     />
   </head>
   <body>
-    <div class="card-container">
-      <h1>Generate a <span class="green-text">random password</span></h1>
+    <div class="container">
+      <div class="card-container">
+        <h1 class="title">Generate a</h1>
+        <h1 class="green-text title">random password</h1>
 
-      <h2>Never use an insecure password again.</h2>
-      <button id="generate-password-btn">Generate passwords</button>
+        <h2 class="subtitle">Never use an insecure password again.</h2>
+        <button id="generate-password-btn" class="generate-btn">
+          Generate passwords
+        </button>
 
-      <div class="slide-container">
-        <input
-          type="range"
-          min="1"
-          max="30"
-          value="15"
-          class="slider"
-          id="slider-el"
-        />
-        <p>Value: <span id="slider-value-el"></span></p>
+        <div class="slider-container">
+          <input
+            type="range"
+            min="1"
+            max="30"
+            value="15"
+            class="slider"
+            id="slider-el"
+          />
+          <p class="slider-value">
+            Password length: <span id="slider-value-el"></span>
+          </p>
+        </div>
+        <hr />
+
+        <div class="passwords-container">
+          <button class="password-btn" id="first-password-el"></button>
+          <button class="password-btn" id="second-password-el"></button>
+        </div>
+        <p class="hint">
+          <span class="green-text">Hint: </span>click on the password to
+          <span class="green-text">copy</span> to your clipboard!
+        </p>
       </div>
-
-      <div class="passwords-container">
-        <button class="password-btn" id="first-password-el"></button>
-        <button class="password-btn" id="second-password-el"></button>
-      </div>
-      <p><span class="green-text">Hint: </span>you can click on the password to <span class="green-text">copy</span> to your clipboard</p>
     </div>
     <script src="script.js"></script>
   </body>

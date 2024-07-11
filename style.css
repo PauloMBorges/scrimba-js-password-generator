@@ -8,9 +8,132 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background-color: #1f2937;
+  color: #f5f5f5;
+  font-size: 28px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  background-color: #2f3e53;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 575px;
+}
+
+.title {
+  font-family: "Karla", sans-serif;
+  font-weight: 900;
+  letter-spacing: -2.5%;
+}
+
+.subtitle {
+  color: #d5d4d8;
+  font-weight: 300;
+  font-size: 0.92em;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.green-text {
+  color: #4adf86;
+}
+
+.generate-btn {
+  background-color: #4adf86;
+  color: #1f2937;
+  font-size: 1em;
+  font-weight: 700;
+
 }
 
 .password-btn {
-    width: 100px;
-    height: 100px;
+    background-color: #273549;
+    color: #55F991;
+    min-width: 211px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+}
+
+.generate-btn,
+.password-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.generate-btn:hover,
+.password-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+.slider-container {
+  margin-top: 1em;
+}
+
+.slider-value {
+  color: #d5d4d8;
+  font-size: 0.7em;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d5d4d8;
+  outline: none;
+  opacity: .9;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: .7;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 0;
+    border-top: 1px solid #1F2937;
+}
+
+.hint {
+    color: #d5d4d8;
+    font-size: 0.7em;
+    font-weight: 500;
+    margin-top: 1.5rem;
 }
