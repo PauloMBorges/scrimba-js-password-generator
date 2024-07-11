@@ -97,22 +97,20 @@ let secondPasswordEl = document.getElementById("second-password-el");
 let generatePasswordBtn = document.getElementById("generate-password-btn");
 var sliderEl = document.getElementById("slider-el");
 var sliderValueEl = document.getElementById("slider-value-el");
-
 generatePasswordBtn.addEventListener("click", renderRandomPassword);
 
 /* slider */
 sliderValueEl.innerHTML = sliderEl.value;
-
 sliderEl.oninput = function () {
   sliderValueEl.innerHTML = this.value;
 };
 
-/* random characters index */
+/* Generate a random index to pick a character from the characters array */
 function getRandomIndex() {
   return Math.floor(Math.random() * characters.length);
 }
 
-/* generate random password with slider length */
+/* Generate a random password with the length specified by the slider */
 function getRandomPassword() {
   let passwordLength = sliderEl.value;
   let randomPassword = "";
@@ -122,14 +120,13 @@ function getRandomPassword() {
   return randomPassword;
 }
 
-/* when the generate random password btn is clicked, calls getRandomPassword twice and set firstPw and secondPw text to these values */
-
+/* Generate two random passwords and set the text content of the password elements */
 function renderRandomPassword() {
   firstPasswordEl.textContent = getRandomPassword();
   secondPasswordEl.textContent = getRandomPassword();
 }
 
-/* copies password to clipboard */
+/* Copy the clicked password to the clipboard */
 const copyPassword = async (event) => {
     const button = event.target;
     const password = button.textContent;
@@ -144,6 +141,7 @@ const copyPassword = async (event) => {
     }
 };
 
+/* Add event listener to all buttons with the class 'password-btn' to enable password copying */
 document.querySelectorAll('.password-btn').forEach(button => {
     button.addEventListener('click', copyPassword);
 });
