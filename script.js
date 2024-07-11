@@ -110,3 +110,13 @@ function getRandomIndex() {
     return Math.floor(Math.random() * characters.length)
 }
 
+/* generate random password with slider length */
+function getRandomPassword() {
+    let passwordLength = sliderEl.value;
+    let randomPassword = "";
+    for (let i = 0; i < passwordLength; i++) {
+      randomPassword += characters[getRandomIndex()];
+    }
+    return randomPassword;
+  }
+  
